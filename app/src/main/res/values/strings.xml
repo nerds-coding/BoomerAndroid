@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Boomer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Start Fragment-->
+    <string name="start_btn">Start Game</string>
+    <string name="about_btn">About Game</string>
+    <string name="about_game">This Game</string>
+
+
+    <!-- Level Fragment -->
+    <string name="level_one">Level One</string>
+    <string name="level_two">Level Two</string>
+    <string name="level_three">Level Three</string>
+    <string name="level_four">Level Four</string>
+    <string name="level_five">Level Five</string>
+    <string name="level_six">Level Six</string>
+    <string name="level_seven">Level Seven</string>
+    <string name="level_eight">Level Eight</string>
+    <string name="level_nine">Level Nine</string>
+    <string name="level_ten">Level Ten</string>
+    <string name="ClickColor">Click on Text</string>
+    <string name="retry_btn">Retry</string>
+    <string name="next_level">Next Level</string>
+    <string name="score_plate">Score</string>
+
+
+</resources>

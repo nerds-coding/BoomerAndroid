@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".modelFiles.Fragment_Start_Page">
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/big_font_size"
+        android:background="@drawable/btn_background"
+        android:paddingStart="@dimen/about_game_text_size"
+        android:paddingTop="@dimen/start_btn_top_bottom_padding"
+        android:paddingEnd="@dimen/about_game_text_size"
+        android:paddingBottom="@dimen/start_btn_top_bottom_padding"
+        android:text="@string/start_btn"
+        android:textSize="@dimen/level_page_margin" />
+
+    <Button
+        android:id="@+id/about_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_font_size"
+        android:background="@drawable/btn_background"
+        android:paddingStart="@dimen/about_game_text_size"
+        android:paddingTop="@dimen/start_btn_top_bottom_padding"
+        android:paddingEnd="@dimen/about_game_text_size"
+        android:paddingBottom="@dimen/start_btn_top_bottom_padding"
+        android:text="@string/about_btn"
+        android:textSize="@dimen/level_page_margin" />
+
+
+</LinearLayout>
+</layout>

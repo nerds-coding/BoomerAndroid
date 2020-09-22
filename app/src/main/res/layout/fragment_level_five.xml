@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="android.view.View"/>
+
+        <variable
+            name="studentClass"
+            type="com.apgroup.boomer.viewFiles.Student"/>
+
+        <variable
+            name="levelFive"
+            type="com.apgroup.boomer.viewModelFiles.LevelFiveAndSixGameEngine" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewFiles.Fragment_Level_Five">
+
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/level_page_margin"
+        tools:text="Score"
+        android:text="@{levelFive.scoreCounter.toString()}"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ClickColor"
+        android:textAlignment="center"
+        android:textColor="@color/dark_black"
+        android:textSize="@dimen/big_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+    <LinearLayout
+        android:id="@+id/colorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <Button
+            android:id="@+id/textView2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="@{levelFive.displayColorName1.toString()}"
+            android:textAlignment="center"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/about_game_text_size"
+            android:textStyle="bold"
+
+            tools:text="Red" />
+        <Button
+            android:id="@+id/textView3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="@{levelFive.displayColorName2.toString()}"
+            android:textAlignment="center"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/about_game_text_size"
+            android:textStyle="bold"
+            tools:text="Red" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@{levelFive.timer.toString()}"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorLayout"
+        tools:text="Timer Text View" />
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn1"
+                android:tag="1"
+                android:background="@{Color.parseColor(levelFive.btn1Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn1TextColor)}"
+                android:text="@{levelFive.btn1Text}"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:tag="2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn2Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn2TextColor)}"
+                android:text="@{levelFive.btn2Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn3"
+                android:tag="3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn3Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn3TextColor)}"
+                android:text="@{levelFive.btn3Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:tag="4"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn4Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn4TextColor)}"
+                android:text="@{levelFive.btn4Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn5"
+                android:tag="5"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn5Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn5TextColor)}"
+                android:text="@{levelFive.btn5Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:tag="6"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn6Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn6TextColor)}"
+                android:text="@{levelFive.btn6Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn7"
+                android:tag="7"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn7Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn7TextColor)}"
+                android:text="@{levelFive.btn7Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:tag="8"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{Color.parseColor(levelFive.btn8Color)}"
+                android:textColor="@{Color.parseColor(levelFive.btn8TextColor)}"
+                android:text="@{levelFive.btn8Text}"
+                android:textSize="@dimen/big_font_size"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

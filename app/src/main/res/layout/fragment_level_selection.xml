@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".modelFiles.LevelSelection">
+
+        <LinearLayout
+            android:id="@+id/ChildLayoutLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/level_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/big_font_size"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="1"
+                android:text="@string/level_one"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="2"
+                android:text="@string/level_two"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="3"
+                android:text="@string/level_three"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="4"
+                android:text="@string/level_four"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="5"
+                android:text="@string/level_five"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="6"
+                android:text="@string/level_six"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="7"
+                android:text="@string/level_seven"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="8"
+                android:text="@string/level_eight"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="9"
+                android:text="@string/level_nine"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+            <Button
+                android:id="@+id/level_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/level_page_margin"
+                android:layout_marginTop="@dimen/level_page_margin"
+                android:layout_marginEnd="@dimen/level_page_margin"
+                android:layout_marginBottom="@dimen/big_font_size"
+                android:background="@drawable/level_btn_background"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="@dimen/big_font_size"
+                android:paddingBottom="@dimen/big_font_size"
+                android:tag="10"
+                android:text="@string/level_ten"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/level_page_margin" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.graphics.Color"/>
+        <variable
+            name="levelOne"
+            type="com.apgroup.boomer.viewModelFiles.LevelOneAndTwoGameEngine" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".viewFiles.Fragment_Level_One">
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/level_page_margin"
+            tools:text="Score"
+            android:text="@{levelOne.scoreCounter.toString()}"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/ClickColor"
+            android:textAlignment="center"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/big_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:textAlignment="center"
+            android:textColor="@color/dark_black"
+            android:textSize="@dimen/about_game_text_size"
+            android:text="@{levelOne.displayColorName.toString()}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:text="Red" />
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@{levelOne.timer.toString()}"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:text="Timer Text View" />
+
+
+        <Button
+            android:id="@+id/btn1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/big_font_size"
+            android:paddingBottom="@dimen/big_font_size"
+            android:textAlignment="center"
+            android:textSize="@dimen/big_font_size"
+            android:textStyle="bold"
+            android:tag="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Red"
+            android:background="@{Color.parseColor(levelOne.btn1Color)}"
+            android:textColor="@{Color.parseColor(levelOne.btn1TextColor)}"
+            android:text="@{levelOne.btn1Text}"/>
+
+        <Button
+            android:id="@+id/btn2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/big_font_size"
+            android:paddingBottom="@dimen/big_font_size"
+            android:textAlignment="center"
+            android:textSize="@dimen/big_font_size"
+            android:textStyle="bold"
+            android:tag="2"
+            android:background="@{Color.parseColor(levelOne.btn2Color)}"
+            app:layout_constraintBottom_toTopOf="@+id/btn1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Blue"
+            android:textColor="@{Color.parseColor(levelOne.btn2TextColor)}"
+            android:text="@{levelOne.btn2Text}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

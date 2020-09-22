@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main_activity"
+    app:startDestination="@id/fragment_Start_Page">
+
+    <fragment
+        android:id="@+id/fragment_Start_Page"
+        android:name="com.apgroup.boomer.modelFiles.Fragment_Start_Page"
+        android:label="fragment_start__page"
+        tools:layout="@layout/fragment_start__page" >
+        <action
+            android:id="@+id/action_fragment_Start_Page_to_fragment_About_Page"
+            app:destination="@id/fragment_About_Page" />
+        <action
+            android:id="@+id/action_fragment_Start_Page_to_levelSelection"
+            app:destination="@id/levelSelection" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_About_Page"
+        android:name="com.apgroup.boomer.modelFiles.Fragment_About_Page"
+        android:label="fragment_about_page"
+        tools:layout="@layout/fragment_about_page" />
+    <fragment
+        android:id="@+id/fragment_Level_One"
+        android:name="com.apgroup.boomer.viewFiles.Fragment_Level_One"
+        android:label="Fragment_Level_One"
+        tools:layout="@layout/fragment_level_one">
+        <argument
+            android:name="levelOneClick"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_fragment_Level_One_to_fragment_Score_Board"
+            app:destination="@id/fragment_Score_Board"
+            app:popUpTo="@+id/fragment_Start_Page" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Level_Three"
+        android:name="com.apgroup.boomer.viewFiles.Fragment_Level_Three"
+        android:label="Fragment_Level_Three"
+        tools:layout="@layout/fragment_level_three">
+        <argument
+            android:name="levelThreeClick"
+            app:argType="integer"
+            android:defaultValue="3" />
+        <action
+            android:id="@+id/action_fragment_Level_Three_to_fragment_Score_Board"
+            app:destination="@id/fragment_Score_Board"
+            app:popUpTo="@+id/fragment_Start_Page" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Level_Four"
+        android:name="com.apgroup.boomer.viewFiles.Fragment_Level_Four"
+        android:label="Fragment_Level_Four"
+        tools:layout="@layout/fragment_level_four">
+        <argument
+            android:name="levelFourClick"
+            app:argType="integer"
+            android:defaultValue="4" />
+        <action
+            android:id="@+id/action_fragment_Level_Four_to_fragment_Score_Board"
+            app:destination="@id/fragment_Score_Board"
+            app:popUpTo="@+id/fragment_Start_Page" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Level_Two"
+        android:name="com.apgroup.boomer.viewFiles.Fragment_Level_Two"
+        android:label="Fragment_Level_Two"
+        tools:layout="@layout/fragment_fragment__level__two">
+        <argument
+            android:name="levelTwoClick"
+            app:argType="integer"
+            android:defaultValue="2" />
+        <action
+            android:id="@+id/action_fragment_Level_Two_to_fragment_Score_Board"
+            app:destination="@id/fragment_Score_Board"
+            app:popUpTo="@+id/fragment_Start_Page" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/levelSelection"
+        android:name="com.apgroup.boomer.modelFiles.LevelSelection"
+        android:label="LevelSelection"
+        tools:layout="@layout/fragment_level_selection">
+        <action
+            android:id="@+id/action_levelSelection_to_fragment_Level_One"
+            app:destination="@id/fragment_Level_One" />
+        <action
+            android:id="@+id/action_levelSelection_to_fragment_Level_Three"
+            app:destination="@id/fragment_Level_Three" />
+        <action
+            android:id="@+id/action_levelSelection_to_fragment_Level_Two"
+            app:destination="@id/fragment_Level_Two" />
+        <action
+            android:id="@+id/action_levelSelection_to_fragment_Level_Four"
+            app:destination="@id/fragment_Level_Four" />
+        <action
+            android:id="@+id/action_levelSelection_to_fragment_Level_Five"
+            app:destination="@id/fragment_Level_Five" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Score_Board"
+        android:name="com.apgroup.boomer.modelFiles.Fragment_Score_Board"
+        android:label="fragment_score_board"
+        tools:layout="@layout/fragment_score_board" >
+        <action
+            android:id="@+id/action_fragment_Score_Board_to_fragment_Start_Page"
+            app:destination="@id/fragment_Start_Page"
+            app:popUpTo="@+id/fragment_Start_Page" />
+        <argument
+            android:name="score"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_fragment_Score_Board_to_levelSelection"
+            app:destination="@id/levelSelection" />
+        <argument
+            android:name="remark"
+            app:argType="string"
+            android:defaultValue="Good" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Level_Five"
+        android:name="com.apgroup.boomer.viewFiles.Fragment_Level_Five"
+        tools:layout="@layout/fragment_level_five"
+        android:label="Fragment_Level_Five" >
+        <argument
+            android:name="levelFiveClick"
+            app:argType="integer"
+            android:defaultValue="5" />
+        <action
+            android:id="@+id/action_fragment_Level_Five_to_fragment_Score_Board"
+            app:destination="@id/fragment_Score_Board" >
+            <argument android:defaultValue="0"
+                android:name="score" />
+            <argument
+                android:name="remark"
+                android:defaultValue="Good" />
+        </action>
+    </fragment>
+</navigation>
